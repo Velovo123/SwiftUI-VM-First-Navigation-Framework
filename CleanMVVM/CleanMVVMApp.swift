@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct CleanMVVMApp: App {
+    
+    init() {
+        DiContainer.shared.bootstrap()
+        PageBootstrapper.shared.bootstrap()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
