@@ -11,6 +11,6 @@ import Foundation
 final class FiltersViewModel : BaseViewModel {
     
     func dismiss() {
-        NavigationService.shared.dismiss()
+        navigationService.dismiss()
     }
 }

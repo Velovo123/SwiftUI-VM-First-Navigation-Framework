@@ -11,7 +11,6 @@ import SwiftUI
 struct CleanMVVMApp: App {
     
     init() {
-        DiContainer.shared.bootstrap()
         PageBootstrapper.shared.bootstrap()
     }
     

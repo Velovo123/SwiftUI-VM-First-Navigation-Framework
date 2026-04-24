@@ -17,11 +17,7 @@ enum NavAction {
 
 
 @Observable
-final class NavigationService {
-    
-    static let shared = NavigationService()
-    private init() {}
-    
+final class NavigationService : NavigationServiceProtocol {
     var path = NavigationPath()
     var sheet: IdentifiableView? = nil
     

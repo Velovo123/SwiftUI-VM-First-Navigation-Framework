@@ -6,18 +6,23 @@
 //
 
 import SwiftUI
+import Factory
 
 struct RootView: View {
-    var navigation = NavigationService.shared
+    @Injected(\.navigationService) private var navigation
+    
+    private var navigationService: NavigationService {
+        navigation as! NavigationService
+    }
     
     var body: some View {
-        NavigationStack(path: Bindable(navigation).path) {
+        NavigationStack(path: Bindable(navigationService).path) {
             PageBootstrapper.shared.view(for: FeedViewModel.self)
                 .navigationDestination(for: IdentifiableView.self) { item in
                     item
                 }
         }
-        .sheet(item: Bindable(navigation).sheet) { item in
+        .sheet(item: Bindable(navigationService).sheet) { item in
             item
         }
     }
@@ -26,7 +31,6 @@ struct RootView: View {
 
 #Preview {
     let _ = {
-        DiContainer.shared.bootstrap()
         PageBootstrapper.shared.bootstrap()
     }()
     

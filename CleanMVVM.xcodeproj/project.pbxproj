@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		601D5C4D2F9B4BAE000BCBF3 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 601D5C292F9A5695000BCBF3 /* Factory */; };
+		601D5C4E2F9B4BAE000BCBF3 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 601D5C2A2F9A5695000BCBF3 /* FactoryKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		601D5BA12F98FFF0000BCBF3 /* CleanMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -19,10 +24,12 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		601D5B9E2F98FFF0000BCBF3 /* Frameworks */ = {
+		601D5C2C2F9A5783000BCBF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601D5C4E2F9B4BAE000BCBF3 /* FactoryKit in Frameworks */,
+				601D5C4D2F9B4BAE000BCBF3 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,18 +60,23 @@
 			buildConfigurationList = 601D5BAC2F98FFF1000BCBF3 /* Build configuration list for PBXNativeTarget "CleanMVVM" */;
 			buildPhases = (
 				601D5B9D2F98FFF0000BCBF3 /* Sources */,
-				601D5B9E2F98FFF0000BCBF3 /* Frameworks */,
 				601D5B9F2F98FFF0000BCBF3 /* Resources */,
+				601D5C2C2F9A5783000BCBF3 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				601D5C4B2F9B4B51000BCBF3 /* PBXTargetDependency */,
+				601D5C452F9B4AE4000BCBF3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				601D5BA32F98FFF0000BCBF3 /* CleanMVVM */,
 			);
 			name = CleanMVVM;
 			packageProductDependencies = (
+				601D5C292F9A5695000BCBF3 /* Factory */,
+				601D5C2A2F9A5695000BCBF3 /* FactoryKit */,
+				601D5C2B2F9A5695000BCBF3 /* FactoryTesting */,
 			);
 			productName = CleanMVVM;
 			productReference = 601D5BA12F98FFF0000BCBF3 /* CleanMVVM.app */;
@@ -94,6 +106,9 @@
 			);
 			mainGroup = 601D5B982F98FFF0000BCBF3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 601D5BA22F98FFF0000BCBF3 /* Products */;
 			projectDirPath = "";
@@ -123,6 +138,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		601D5C452F9B4AE4000BCBF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 601D5C442F9B4AE4000BCBF3 /* Factory */;
+		};
+		601D5C4B2F9B4B51000BCBF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 601D5C4A2F9B4B51000BCBF3 /* FactoryKit */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		601D5BAA2F98FFF1000BCBF3 /* Debug */ = {
@@ -332,6 +358,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		601D5C292F9A5695000BCBF3 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		601D5C2A2F9A5695000BCBF3 /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+		601D5C2B2F9A5695000BCBF3 /* FactoryTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryTesting;
+		};
+		601D5C442F9B4AE4000BCBF3 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		601D5C4A2F9B4B51000BCBF3 /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 601D5C282F9A5695000BCBF3 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 601D5B992F98FFF0000BCBF3 /* Project object */;
 }

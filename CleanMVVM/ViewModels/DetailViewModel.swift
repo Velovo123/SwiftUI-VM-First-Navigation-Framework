@@ -20,6 +20,6 @@ final class DetailViewModel : BaseViewModel {
     
     
     func goBack() {
-        NavigationService.shared.pop()
+        navigationService.pop()
     }
 }

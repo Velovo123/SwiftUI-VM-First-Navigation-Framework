@@ -11,10 +11,10 @@ import Foundation
 final class FeedViewModel : BaseViewModel {
     
     func userDidSelectPost(id: String) {
-        NavigationService.shared.push(DetailViewModel.self, params: id)
+        navigationService.push(DetailViewModel.self, params: id)
     }
     
     func userDidTapFilters() {
-        NavigationService.shared.present(FiltersViewModel.self)
+        navigationService.present(FiltersViewModel.self)
     }
 }
